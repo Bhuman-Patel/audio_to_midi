@@ -41,7 +41,7 @@ This procedure can only work if the total frame length is at least twice the len
 
 Musical notes usually start at some point. The starting point of a musical note is called onset. While the pitch allows us to differentiate which note is playing, the onset informs when the note starts.
 
-There are many different methods to detect note onsets. Each one of them works best for a different type of signal (for more information, check [this tutorial article by Juan P. Bello et al., 2008](http://icdif.com/soundit/Bello-TSAP-2005.pdf)). Essentially, onset detection works by finding when the contents of a signal frame indicate that something new (in the case of monophonic melodies, "something new" can only mean a new note!) happened since the previous frame.
+There are many different methods to detect note onsets. Each one of them works best for a different type of signal (for more information, check [this tutorial article by Juan P. Bello et al., 2008](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=4afa5e20cbbc5300c51dd9e16e20674d257a3f39). Essentially, onset detection works by finding when the contents of a signal frame indicate that something new (in the case of monophonic melodies, "something new" can only mean a new note!) happened since the previous frame.
 
 Librosa has a pre-built onset detector. It fails in more complicated sounds, but it works just fine for monophonic audio. Librosa's onset detector receives as parameters both an audio signal and information on the frame size used to compute the onsets. Using the same framing configurations as in the pitch detection stage, we avoid dealing with different sample rates in the pitch and onset signals.
 
